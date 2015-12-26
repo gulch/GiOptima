@@ -226,7 +226,7 @@ class GiOptima extends \Imagick
             $image->setImageFormat('webp');
             $image->setImageAlphaChannel(\Imagick::ALPHACHANNEL_ACTIVATE);
             $image->setBackgroundColor(new \ImagickPixel('transparent'));
-        } catch (\Throwable $e) {
+        } catch (\Exception $e) {
             echo 'Caught exception: ' . $e->getMessage() . '<br>';
         }
     }

@@ -1,5 +1,5 @@
 # GiOptima
 
 - Image smart resize
-- WEBP save support
+- Convert to WEBP format
 - Extends Imagick Class
