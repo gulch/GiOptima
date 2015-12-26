@@ -10,7 +10,7 @@ class GiOptima extends \Imagick
      * Resizes the image using smart defaults for high quality and low file size.
      *
      * This function is basically equivalent to:
-     *  `mogrify -path OUTPUT_PATH -filter Triangle -define filter:support=2.0 -thumbnail OUTPUT_WIDTH -unsharp 0.25x0.25+8+0.065 -dither None -posterize 136 -quality 82 -define jpeg:fancy-upsampling=off -define png:compression-filter=5 -define png:compression-level=9 -define png:compression-strategy=1 -define png:exclude-chunk=all -interlace none -colorspace sRGB -strip INPUT_PATH`
+     * `mogrify -path OUTPUT_PATH -filter Triangle -define filter:support=2.0 -thumbnail OUTPUT_WIDTH -unsharp 0.25x0.25+8+0.065 -dither None -posterize 136 -quality 82 -define jpeg:fancy-upsampling=off -define png:compression-filter=5 -define png:compression-level=9 -define png:compression-strategy=1 -define png:exclude-chunk=all -interlace none -colorspace sRGB -strip INPUT_PATH`
      *
      * @access   public
      *
@@ -68,7 +68,7 @@ class GiOptima extends \Imagick
      * @param    bool $fill Fill in the bounding box with the background colour.
      * @param    integer $filter The resampling filter to use. Refer to the list of filter constants at <http://php.net/manual/en/imagick.constants.php>.
      *
-     * @return    bool    Indicates whether the operation was performed successfully.
+     * @return   bool    Indicates whether the operation was performed successfully.
      */
     public function thumbnailImage(
         $columns,
