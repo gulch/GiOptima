@@ -1,9 +1,3 @@
-# GiOptima
-
-- Image smart resize
-- Convert to WEBP format
-- Extends Imagick Class
-
 # giOptima
 Package for image smart resize with convert to WEBP optionaly.
 
