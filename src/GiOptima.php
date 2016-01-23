@@ -223,9 +223,9 @@ class GiOptima extends \Imagick
     public function convertToWEBP()
     {
         try {
-            $image->setImageFormat('webp');
-            $image->setImageAlphaChannel(\Imagick::ALPHACHANNEL_ACTIVATE);
-            $image->setBackgroundColor(new \ImagickPixel('transparent'));
+            $this->setImageFormat('webp');
+            $this->setImageAlphaChannel(\Imagick::ALPHACHANNEL_ACTIVATE);
+            $this->setBackgroundColor(new \ImagickPixel('transparent'));
         } catch (\Exception $e) {
             echo 'Caught exception: ' . $e->getMessage() . '<br>';
         }
