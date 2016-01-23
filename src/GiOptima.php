@@ -32,6 +32,11 @@ class GiOptima extends \Imagick
                     ($this->getImageWidth() - ($this->getImageHeight() / $need_ratio)) / 2, 0);
             }
         }
+        
+        // no upsizing
+        $width = min($width, $this->getImageWidth());
+        $height = min($height, $this->getImageHeight());
+        
         $this->thumbnailImage($width, $height);
 
         $this->unsharpMaskImage(0, 0.5, 1, 0.05);
