@@ -180,7 +180,11 @@ class GiOptima extends \Imagick
         // Strip all profiles except color profiles.
         foreach ($this->getImageProfiles('*', true) as $key => $value) {
             if ($key != 'icc' && $key != 'icm') {
-                $this->removeImageProfile($key);
+                try {
+                  $this->removeImageProfile($key);
+                } catch(\ImagickException $e) {
+                    //
+                }
             }
         }
 
