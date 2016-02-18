@@ -35,6 +35,8 @@ use gulch\GiOptima;
 $i = new GiOptima('/path/to/image.jpg');
 // Resize to 400x300
 $i->smartResize(400,300);
+// Set image quality (optional)
+$i->setImageCompressionQuality(80);
 // Save image
 $i->writeImage('/path/to/resized-image.jpg');
 
