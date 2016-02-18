@@ -1,8 +1,6 @@
 <?php
 
-
 namespace gulch;
-
 
 class GiOptima extends \Imagick
 {
@@ -41,7 +39,6 @@ class GiOptima extends \Imagick
 
         $this->unsharpMaskImage(0, 0.5, 1, 0.05);
         $this->posterizeImage(136, false);
-        $this->setImageCompressionQuality(80);
         $this->setOption('jpeg:fancy-upsampling', 'off');
         $this->setOption('png:compression-filter', '5');
         $this->setOption('png:compression-level', '9');
