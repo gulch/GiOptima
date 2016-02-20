@@ -32,8 +32,12 @@ class GiOptima extends \Imagick
         }
         
         // no upsizing
-        $width = min($width, $this->getImageWidth());
-        $height = min($height, $this->getImageHeight());
+        if($width) {
+            $width = min($width, $this->getImageWidth());
+        }
+        if($height) {
+            $height = min($height, $this->getImageHeight());
+        }
         
         $this->thumbnailImage($width, $height);
 
