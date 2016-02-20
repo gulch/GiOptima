@@ -152,20 +152,7 @@ class GiOptima extends \Imagick
             $new_height = 1;
         }
 
-        // if we’re resizing the image to more than about 1/3 it’s original size
-        // then just use the resize function
-        if (($x_factor * $y_factor) > 0.1) {
-            $this->resizeImage($new_width, $new_height, $filter, 1);
-
-            // if we’d be using sample to scale to smaller than 128x128, just use resize
-        } elseif ((($SampleFactor * $new_width) < 128) || (($SampleFactor * $new_height) < 128)) {
-            $this->resizeImage($new_width, $new_height, $filter, 1);
-
-            // otherwise, use sample first, then resize
-        } else {
-            $this->sampleImage($SampleFactor * $new_width, $SampleFactor * $new_height);
-            $this->resizeImage($new_width, $new_height, $filter, 1);
-        }
+        $this->resizeImage($new_width, $new_height, $filter, 1);
 
         // if the alpha channel is not defined, make it opaque
         if ($this->getImageAlphaChannel() == \Imagick::ALPHACHANNEL_UNDEFINED) {
